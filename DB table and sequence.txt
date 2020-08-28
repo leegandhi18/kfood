@@ -1,7 +1,6 @@
-2Á¶ ÆÀ ÇÁ·ÎÁ§Æ® sql
 
--- ¸â¹ö »ı¼º Å×ÀÌºí
--- °ü¸®ÀÚ´Â id¸¦ adminÀ¸·Î »ı¼ºÇÏ½Ã¸é °ü¸®ÀÚ°¡ µË´Ï´Ù.
+-- ë©¤ë²„ ìƒì„± í…Œì´ë¸”
+-- ê´€ë¦¬ìëŠ” idë¥¼ adminìœ¼ë¡œ ìƒì„±í•˜ì‹œë©´ ê´€ë¦¬ìê°€ ë©ë‹ˆë‹¤.
 create table member(
 id varchar2(20) primary key not null,
 password varchar2(20) not null,
@@ -12,7 +11,7 @@ tel varchar2(50) not null,
 email varchar2(50) not null,
 address varchar2(100) not null);
 
---°Ô½ÃÆÇ Å×ÀÌºí »ı¼º
+--ê²Œì‹œíŒ í…Œì´ë¸” ìƒì„±
 
 create table board (
     num number PRIMARY key,
@@ -67,7 +66,7 @@ create table board4 (
     readcount number,
     content varchar2(500));
 
---°Ô½ÃÆÇ ½ÃÄö½º »ı¼º
+--ê²Œì‹œíŒ ì‹œí€€ìŠ¤ ìƒì„±
 
  create sequence board_seq
     increment by 1
@@ -96,7 +95,7 @@ create table board4 (
 
 
 
---Å×ÀÌºí ¿Ü·¡Å° Ãß°¡
+--í…Œì´ë¸” ì™¸ë˜í‚¤ ì¶”ê°€
 
 alter table board add
 constraint fk_id foreign key (writer)
